@@ -1,0 +1,76 @@
+.title h1{
+    color: rgb(100, 93, 93);
+    font-weight: 10px;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgb(207, 206, 206);
+
+}
+header{
+   
+}
+
+.column {
+    display:flex;
+    text-align:center;
+}
+.navbar {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(201, 197, 197, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height:50px;}
+.sidenav{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(201, 197, 197, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100%;
+    border-radius: 6px;
+    padding:4px;
+  
+    
+  }
+.row.content{
+    margin-top: 15px;
+
+}
+.well{
+    
+    padding:10px;
+    }
+.header{
+    background-color:#4692f0;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    padding:2px;
+    border-radius:10px;
+}
+.header h5{
+    line-height: 37px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f5fcf6;
+    letter-spacing: -1px;
+    height: 37px;
+    
+}
+.button {
+    background-color: #eaebe8;
+    border: 1px solid #1075db;
+    border-radius: 10px;
+    line-height: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0;
+    padding:10px;
+    transition-duration: 0.3s;
+}
+.button:hover {
+  background-color:rgb(37, 36, 35); /* Green */
+  color: rgb(243, 236, 236);
+  
+}
+  
