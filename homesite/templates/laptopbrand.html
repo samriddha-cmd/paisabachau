@@ -1,0 +1,353 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  
+<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+    <div class="container" style="background-color:rgb(248, 245, 245)">
+        <div class="title">
+            <h1>PaisaBachau.com</h1>
+        </div>
+    
+        <div class="navbars">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <div class="navbar-brand"><a href="{% url 'homepage' %}" style="text-decoration: none; font: bold; color: black;">PB</a></div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item nav-color">
+                        <a class="nav-link " href="#"><h7 style="color: black; font: bold;">Mobiles</h7></a>
+                      </li>
+                      <li class="nav-item nav-color">
+                        <a class="nav-link  " href="{%url 'laptoppage'%}"><h7>Laptop</h7></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Television</a>
+                      </li>
+      
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+                          <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#">About Us</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <div class="container fluid" style="background-color:rgb(248, 245, 245);">
+            <div class="row content" style="margin-top: 1rem;">
+                <div class="col-lg-3 col-12 sidenav"
+                    style="box-shadow: 0 4px 8px 0 rgba(228, 225, 225, 0.952), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-right:1rem; margin-bottom: 1rem;background-color:rgb(248, 245, 245);border-radius: 0.5rem; height: 200px;">
+                    <div class="search" style="border:1px solid black ; margin-top: 1rem;">
+                        <h6 style="text-align: center;margin-top: 0.5rem;"> Search by Price</h6>
+                    </div>
+                
+                        <div class="row content" style="margin:1rem;">
+                            <form action="" method="GET">
+                                {% csrf_token %}
+                                <div class="col-lg-12 col-md-12 col-12" style="margin-bottom: 0.5rem;text-align: center;">
+                                  
+                                      
+                                      <input class="form-control form-control-sm col-12" type="number" name="lowerlimits"
+                                            placeholder="Rs. lower limit" style="text-align: center;">
+                                  
+                                </div>
+            
+                                <div class="col-lg-12 col-md-12 col-12" style="text-align: center;" >
+                                    <input class="form-control form-control-sm" type="number" name="upperlimits"
+                                        placeholder="Rs .upper limit" style="text-align: center;">
+                                </div>
+                                <div class="col-md-12 col-lg-12 col-12 button-buy" style="margin:0.5rem;text-align: center;">
+                                    <input type="submit"
+                                        style="border:1px solid black;background-color:black;color: white;padding-left: 1rem;padding-right:1rem; border-radius: 0.2rem;"
+                                        >
+                                </div>
+                            </form>
+                        </div>
+            
+                
+                </div>
+            
+            
+            
+                <div class="col-md-12 col-lg-8 col-12"
+                    style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(250, 244, 244, 0.952), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <h2
+                        style="margin-left:1rem;margin-bottom: 1rem; margin-bottom: 1rem;color: rgb(100, 93, 93);text-align: center; margin-top: 0.5rem;">
+                        {{brand}}
+                        Laptops in Nepal 2021
+                    </h2>
+                    <div class="row content">
+                        <div class="col-md-12 col-lg-2 col-12" style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">
+                            <small>
+                                {{count}} laptops found
+                            </small>
+                        </div>
+            
+                        <div class="col-md-12 col-lg-2 col-12" style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">
+                            <small>
+                                ITTInepal 
+                            </small>
+                        </div>
+                        <div class="col-md-12 col-lg-2 col-12" style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">
+                            <small>
+                                ptechelectronics 
+                            </small>
+                        </div>
+                        <div class="col-md-12 col-lg-2 col-12" style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center;margin:0.2rem;"> 
+                            <small>
+                                ldsnepal 
+                            </small>
+                        </div>
+                        <div class="col-md-12 col-lg-2 col-12" style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center;margin:0.2rem;"> 
+                            <small>
+                                zozohub 
+                            </small>
+                        </div>
+                    </div>
+                    {% if count == 0 %}
+                    <div class="Nothingfound" style="margin-top:5rem; margin-bottom: 5rem; margin-left: 2rem;" >
+                        
+                        <h3>Sorry No Laptops Found try different Price range!!!!!!!</h3>
+                      
+                    </div>
+                    {%endif%}
+                    {% for list in ittinepal%}
+                    <div class="row content post-box"
+                        style=" padding: 1rem; box-shadow: 0 4px 8px 0 rgba(228, 225, 225, 0.952), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color:white;border-radius: 0.5rem; margin: 1rem;">
+                        <div class="col-lg-3 col-md-12 col-12">
+                          
+                            <div class="laptopphotos">
+            
+                                <img src="{{list.photolink}}" alt="apple logo loading...." width="100%" class="rounded">
+            
+                            </div>
+            
+                        </div>
+                        <div class="col-md-9 col-12">
+                            <h4>{{list.laptopname}}</h4>
+                            <div class="row content">
+            
+                                <div class="col-md-10 col-10" style="">
+                                    <a href="{{list.forwardlink}}" class="btn btn-primary button-type" target="_blank">Buy Now
+                                        From Site</a>
+                                </div>
+            
+                                <div class="row content">
+                                    <div class="col-md-6">
+                                        <div class="row content">
+                                            <div class="col-md-5 col-6" style="padding: 1rem;">
+                                                <h5>Available on</h5>
+                                            </div>
+                                            <div class="col-md-7 col-6" style="padding: 1rem; align-items: center;">
+                                                {% if list.site == 'ittinepal'  %}
+            
+                                                <img src="{% static 'ittilogo.png' %}" alt="apple logo loading...." width="60%"
+                                                    class="rounded">
+                                                {%endif%}
+                                                {% if list.site == 'ldsnepal' %}
+                                                <img src="{% static 'lds.jpg' %}" alt="apple logo loading...." width="40%"
+                                                    class="rounded">
+                                                {%endif%}
+                                                {% if list.site == 'ptech electronics' %}
+                                                <img src="{% static 'ptech.jpg' %}" alt="apple logo loading...." width="80%"
+                                                    class="rounded">
+                                                {%endif%}
+                                                {% if list.site == 'zozohub' %}
+                                                <img src="{% static 'zozohub.png' %}" alt="apple logo loading...." width="100%"
+                                                    class="rounded">
+                                                {%endif%}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row content" style="padding: 1rem;">
+                                            <div class="col-md-2 col-4">
+            
+                                            </div>
+                                            <div class="col-md-8 col-12">
+                                                <p>
+                                                <h5 style="color:#0275d8;text-align: center;" class="priceheading">NPR {{list.price}}</h5>
+                                                </p>
+            
+                                            </div>
+            
+                                        </div>
+            
+                                    </div>
+            
+            
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                    <h5 style="text-align: center;">Tapaiko din subha rahos🙏🙏🙏</h5>
+                
+                </div>
+            </div>
+         
+        </div>
+ 
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4" style="margin-top: 1rem;">
+            <i class="fas fa-gem me-3" ></i>PaisaBachau
+          </h6>
+          <p>
+           Paisabachau is site designed for easy find out of different products available in online at best possible price.
+           with the moto of time is money now you need not to visit different sites for price comparison. Just click the cateogeory of product
+           you want and scroll out how much it cost in top online sites of Nepal. 
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="margin-top:1rem;">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Laptops</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Mobile</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Television</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Refrigerators</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="margin-top:1rem;">
+            Useful links
+          </h6>
+          <p>
+            <a href="https://itti.com.np/" class="text-reset" style="text-decoration: none;">ITTInepal</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">ldsnepal</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">ptechelectronics</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">zozohub</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="margin-top: 1rem; margin-left: 1rem;">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> New Baneswhor, Kathmandu, Nepal</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            timeismoney9999@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> +9779868849124</p>
+          <p><i class="fas fa-print me-3"></i> +9779868849124</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/" style="text-decoration: none;">Paisabachau: Time is Money</a>
+    <p>Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.</p>
+  </div>
+  <!-- Copyright -->
+</footer>
+    
+    
+    
+    
+    
+    
+    
+    </div>
+      
+    
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous">
+    </script>
+    
+    
+ 
+</body>

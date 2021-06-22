@@ -1,0 +1,262 @@
+.nav-item:hover::after {
+    width: 100%
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: black;}
+
+
+
+.title h1{
+    color: rgb(100, 93, 93);
+    font-weight: 10px;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgb(207, 206, 206);
+
+}
+.container{
+    background-color: white;
+}
+.price {
+    color: grey;
+    font-size: 15px;
+  }
+.card-item{
+    padding: 10px; margin: 15px; text-align: center; 
+    align-items: center;
+   
+    background-color:white;
+    border-radius: 0.5rem; 
+  
+}
+
+
+
+  
+.card-item button {
+    vertical-align: bottom;
+    border: none;
+    outline: 0;
+   padding: 5px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 10px;
+  }
+  
+.card-item button:hover {
+    opacity: 0.7;
+    background-color:rgb(17, 7, 7);
+  }
+
+.column {
+    display:flex;
+    text-align:center;
+}
+.navbar {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(201, 197, 197, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container2-fluid {
+    margin-top:20px;
+    
+}
+
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  
+.sidenavbar{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(201, 197, 197, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   height:120%;
+    border-radius:6px;
+    padding: 10px;
+  
+    
+  }
+.well{
+    
+    padding:10px;
+    }
+.header{
+    margin-top: 10px;
+    background-color:#4692f0;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    padding:2px;
+    border-radius:10px;
+}
+.header h5{
+    letter-spacing: 1rem;
+    line-height: 37px;
+    font-size: 18px;
+    font-weight: 700px;
+    color:white;
+    text-emphasis-color: pink;
+    margin-top: 5px;
+    letter-spacing: -1px;
+    height: 37px;
+    margin-left: 10px;
+    
+    
+}
+.header a{
+    text-align: center;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.button {
+    background-color: #eaebe8;
+    border: 1px solid #1075db;
+    border-radius: 10px;
+    line-height: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    margin:0rem;
+    padding: 0.8em;
+    transition-duration: 0.3s;
+}
+.button-class{
+   margin-top: 0.7rem;
+}
+.button:hover {
+  background-color:rgb(37, 36, 35); /* Green */
+  color: rgb(243, 236, 236);
+  
+}
+
+
+
+
+.group1{
+    margin-bottom: 20px;
+}
+
+
+.viewphoto{
+   
+    padding:10px;
+}
+.viewphoto:hover img{
+    transform: scale(1.5);
+    transition: transform 0.5s ease;
+    
+}
+.button-buy:hover{
+    transform: scale(0.80);
+    transition: transform 0.5s ease;
+}
+
+
+
+  
+.well{
+    display:flex;
+
+}
+.titles{
+    height: 100px;
+}
+.price {
+  color: black;
+    height: 20px;
+
+}
+
+.gs_control{
+    font-size:15px;
+    letter-spacing:2px;
+    display: inline-block;
+    color: black;
+    height:5px;
+    text-align: center;
+}
+.image{
+    padding:10px;
+  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    border-radius:6px;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+}
+
+@media screen and (max-width: 1400px){
+  
+    .gs_control{
+        font-size:10px;
+        letter-spacing:0px;
+        display: inline-block;
+        color: black;
+        height:0px;
+       
+    }
+    .sidenavbar{
+        width:100%;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    .titles{
+        height: 125px;
+    }
+    
+  
+}
+@media screen and (max-width: 700px){
+ 
+    
+    .sidenavbar{
+        width:100%;
+    }
+    .gs_control{
+  
+        font-size:15px;
+        letter-spacing:1px;
+        display: inline-block;
+
+      
+        color: black;
+    
+        vertical-align:middle;
+    }
+  
+
+}
+@media screen and (max-width:638px){
+    
+    .gs_control{
+        padding:-10px;
+        letter-spacing: 0px;
+        height:0px;
+        font-size:12px;
+    
+    }
+    .titles{
+        height: 150px;
+    }
+}
+
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: black;
+    transition: 0.4s;
+}
+

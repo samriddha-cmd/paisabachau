@@ -1,3 +1,11 @@
-from django.test import TestCase
+sam="laptop-50000-to-100000"
 
-# Create your tests here.
+
+
+sam=sam.split('-')[0]
+
+if sam=='laptop':
+    print('Yes')
+else:
+    print('No')
+print(sam)

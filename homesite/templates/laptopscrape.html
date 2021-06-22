@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PAISABACHAU.COM -------------------------------------------</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="enter your password sam" name="password">
+            <input type="submit">
+        </form>
+        <h3>{{password}}</h3>
+        <h3>{{wait}}</h3>
+</body>
+</html>

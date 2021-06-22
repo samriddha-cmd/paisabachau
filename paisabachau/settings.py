@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(z1c6obvwfoa&%cg#7p_h+!@4pn+t_&x=_ns5nk&7gk*#t0nm-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.155']
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'paisabachau.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,5 +128,6 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

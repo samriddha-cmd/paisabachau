@@ -15,10 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import homesite.views
+from django.conf import settings
 from django.conf.urls.static import static
+import homesite.views
+import homesite.views2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',homesite.views.home,name='homepage')
-]
+    path('',homesite.views.home,name='homepage'),
+    path('laptop',homesite.views.laptop,name='laptoppage'),
+    path('<slug:priceslug>/',homesite.views.pricerange,name='price'),
+    path('mobile',homesite.views.mobile,name='mobilepage'),
+    path('laptopscrape',homesite.views2.laptopscrape,name='laptopscrape'),
+
+    path('laptop/<slug:brandslug>/',homesite.views.companys,name='company'),
+    path('mobile/<slug:brandslug>/',homesite.views.mobilecompany,name='mobilecompany')
+    ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+ 

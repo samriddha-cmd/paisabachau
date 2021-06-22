@@ -2,119 +2,357 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Reggae+One&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
- <style>
 
- </style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'style2.css' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Reggae+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script>
+    window.onload = function () {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    };
+  </script>
+</head>
 
 <body>
+  <div id="loader">
+    <img src="{% static 'tennispreloader.gif' %}" alt="">
+  </div>
+
+  <div id="content">
     <div class="container">
-        <div class="title">
-            <h1>PaisaBachau.com</h1>
-        </div>
+      <div class="title">
+        <h1>PaisaBachau.com</h1>
+      </div>
+      <div class="navbars">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <div class="navbar-brand"><a href="{% url 'homepage' %}" style="text-decoration: none; font: bold; color: black;">PB</a></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item nav-color">
+                  <a class="nav-link " href="{%url 'mobilepage'%}"><h7 style="color: black; font: bold;">Mobiles</h7></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  " href="{%url 'laptoppage'%}">Laptop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Television</a>
+                </li>
 
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-        <div class="navbars">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <div class="navbar-brand">PB</div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Mobiles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Laptop</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Television</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">News</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    More
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                                    <li><a class="dropdown-item" href="#">Contact Us</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">About Us</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-primary" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-            <div class="container2-fluid text-center">
-                <div class="row content">
-
-                    <div class="col-sm-9 text-left">
-                        
-                        <div class="latestmobile">
-                            <div class="header">
-                                <h5>Latest Mobiles</h5>
-                                <a href="#" class="button">See More</a>
-                            </div>
-                            
-                        </div>
-                       
-                    </div>
-                    <div class="col-sm-3 sidenav">
-                        <h6>Recent News</h6>
-                        <div class="well">
-                            
-                        </div>
-                        <div class="well">
-                        
-                        </div>
-                        <div class="well">
-                          
-                        </div>
-                    </div>
-                </div>
+                    <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+              </form>
             </div>
+          </div>
+        </nav>
+      </div>
+      <div class="latestmobile">
+        <div class="header">
+          <h5>Deal of the Month : ITTI Nepal</h5>
+        </div>
+      </div>
+      <div class="row content d-flex justify-content-between item-a">
+
+        {%for info in ittitotalinfo %}
+
+
+        <div class=" col-xl-2 col-md-3 col-sm-5 col-5 card-item" style=" padding: 0.5rem;   margin-top: 0.5rem;  box-shadow: 0 4px 8px 0 rgba(228, 225, 225, 0.952), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   border-radius: 0.5rem;    
+                       background-color:white;">
+
+          <div class="viewphoto"><img src="{{info.image}}" alt="loading...." style="width:100%; "></div>
+          <div class="titles" style="height: 150px;">
+            <small>{{info.name}}</small>
+          </div>
+          <p class="price" style="font-weight: bold;"> NPR {{info.arranger}}</p>
+          <p><button onclick="location.href='{{info.forwardpage0}}'" class="align-self-end ml-auto button-buy">Buy Now
+              From Site</button></p>
+
 
         </div>
-        
+        {% endfor %}
+
+      </div>
+      <div class="latestmobile">
+        <div class="header">
+          <h5>Latest mobiles</h5>
+          <div class="button-class"><a href="#" class="button" style="">See More</a></div>
+        </div>
+      </div>
+
+      <div class="row content d-flex justify-content-between item-a">
+
+        {%for info in infos %}
+
+
+        <div class=" col-xl-2 col-md-3 col-sm-5 col-5 card-item" style=" padding: 0.5rem;   margin-top: 0.5rem;  box-shadow: 0 4px 8px 0 rgba(228, 225, 225, 0.952), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   border-radius: 0.5rem;    
+                       background-color:white;">
+
+          <div class="viewphoto"><img src="{{info.photolink}}" alt="loading...." width="100%" style="padding: 2rem; height: 12rem; "></div>
+          <div class="titles" style="height: 100px;">
+            <small>{{info.mobilename}}</small>
+          </div>
+          <p class="price" style="font-weight: bold;"> NPR {{info.price}}</p>
+          <p><button onclick="location.href='{{info.forwardlink}}'" class="align-self-end ml-auto button-buy">Buy Now
+              From Site</button></p>
+
+
+        </div>
+        {% endfor %}
+
+      </div>
+
+
+        <div class="row content">
+
+          <div class="col-sm-12">
+            <div class="latestmobile">
+              <div class="header">
+                <h5>Popular Product By Budget</h5>
+              </div>
+
+            </div>
+          </div>
+        </div>
+          <div class="row content d-flex item-a">
+            <div class="col col-md-3 col-12" style=" padding: 1rem;">
+              <div class="row content">
+                <div class="col col-lg-12 col-12" style="">
+                  <img src="{%static 'laptopgroup.jpg'%}" alt="" width="100%">
+                </div>
+                <div class="col col-lg-12 col-md-12 col-12" style="text-align: center; ">
+                  <p class="product-by-budget" style="margin-top: 1rem; font-weight: bold;">Laptops</p>
+                </div>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <a href="{% url 'price' priceslug='laptop-50000-100000' %}" style="text-decoration: none; font: bold; color: black;" >
+                  <p style="margin-bottom: 1rem; background-color:white; border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.50,000 - Rs.1,000,00</p>
+                </a>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <a href="{% url 'price' priceslug='laptop-100000-150000' %} "style="text-decoration: none; font: bold; color: black;">
+                  <p style="margin-bottom: 1rem; background-color:white; border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.1,00,000 - Rs.1,50,000</p>
+                </a>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <a href="{% url 'price' priceslug='laptop-150000-200000' %}"style="text-decoration: none; font: bold; color: black;">
+                  <p style="margin-bottom: 1rem; background-color:white; border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.1,50,000 - Rs.2,00,000</p>
+                </a>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <a href="{% url 'price' priceslug='laptop-200000-500000' %}"style="text-decoration: none; font: bold; color: black;">
+                  <p style="margin-bottom: 1rem; background-color:white; border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.2 lakh plus</p>
+                </a>
+              </div>
+              
+            </div>
+            <div class="col col-md-3 col-12" style=" padding: 1rem;">
+              <div class="row content">
+                <div class="col col-lg-12 col-12" style=" text-align: center;">
+                  <img src="{%static 'mobilegroup.jpg'%}" alt="" width="89%">
+                </div>
+                <div class="col col-lg-12 col-md-12 col-12" style="text-align: center; ">
+                  <p class="product-by-budget" style="margin-top: 1rem; font-weight: bold;">Mobiles</p>
+                </div>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <p style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.50,000 - Rs.1,000,00</p>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <p style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.1,00,000 - Rs.1,50,000</p>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <p style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.1,50,000 - Rs.2,00,000</p>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <p style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.2 lakh plus</p>
+              </div>
+              
+            </div>
+            <div class="col col-md-3 col-12">
+              <div class="row content">
+                <div class="col col-lg-12 col-12" style="padding: 0.5rem;">
+                  <img src="{%static 'television.jpg'%}" alt="" width="95%" >
+                </div>
+                <div class="col col-lg-12 col-md-12 col-12" style="text-align:center;">
+                  <p class="product-by-budget" style="margin-top: 1rem; font-weight: bold;">Televisions</p>
+                </div>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <p style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.50,000 - Rs.1,000,00</p>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <p style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.1,00,000 - Rs.1,50,000</p>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <p style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.1,50,000 - Rs.2,00,000</p>
+              </div>
+              <div class="col col-md-12 col-12" style="margin:0.5rem;">
+                <p style="margin-bottom: 1rem; background-color:rgb(248, 247, 247); border-radius: 0.5rem;box-shadow: 0 4px 8px 0 rgba(216, 212, 212, 0.952);padding: 0.5rem; text-align: center; margin:0.2rem;">Rs.2 lakh plus</p>
+              </div>
+              
+            </div>
+            
+            
+    
+          </div>
 
 
 
 
+         
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-            crossorigin="anonymous">
-        </script>
+      
+
+
+      <footer class="text-center text-lg-start bg-light text-muted">
+
+
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4" style="margin-top: 1rem;">
+                  <i class="fas fa-gem me-3"></i>PaisaBachau
+                </h6>
+                <p>
+                  Paisabachau is site designed for easy find out of different products available in online at best
+                  possible price.
+                  with the moto of time is money now you need not to visit different sites for price comparison. Just
+                  click the cateogeory of product
+                  you want and scroll out how much it cost in top online sites of Nepal.
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4" style="margin-top:1rem;">
+                  Products
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Laptops</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Mobile</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Television</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Refrigerators</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4" style="margin-top:1rem;">
+                  Useful links
+                </h6>
+                <p>
+                  <a href="https://itti.com.np/" class="text-reset" style="text-decoration: none;">ITTInepal</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">ldsnepal</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">ptechelectronics</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">zozohub</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4" style="margin-top: 1rem; margin-left: 1rem;">
+                  Contact
+                </h6>
+                <p><i class="fas fa-home me-3"></i> New Baneswhor, Kathmandu, Nepal</p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  timeismoney9999@gmail.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i> +9779868849124</p>
+                <p><i class="fas fa-print me-3"></i> +9779868849124</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2021 Copyright:
+          <a class="text-reset fw-bold" href="https://mdbootstrap.com/" style="text-decoration: none;">Paisabachau
+            Network</a>
+          <p>Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated
+            third parties.</p>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+
+
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+      </script>
+
+
+  </div>
 </body>
+
 </html>
